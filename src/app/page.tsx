@@ -1,17 +1,33 @@
 import React from "react";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 import Link from "next/link";
+import Image from "next/image";
+import lisergicBg from "../../public/lisergicBg.svg";
+import {
+  LandingWrapper,
+  Navbar,
+  SectionButton,
+  SectionText,
+  SvgLanding,
+} from "@/components/styles";
 
 export default function Page() {
   return (
-    <Stack spacing={2} direction="row">
-      <Button variant="text">
-        <Link href={"/work"}>Works</Link>
-      </Button>
-      <Button variant="contained">
-        <Link href={"/about"}> About</Link>
-      </Button>
-    </Stack>
+    <LandingWrapper>
+      <Navbar>
+        <SectionButton>
+          <Link href={"/work"}>
+            <SectionText>Works</SectionText>
+          </Link>
+        </SectionButton>
+        <SectionButton>
+          <Link href={"/about"}>
+            <SectionText> About</SectionText>
+          </Link>
+        </SectionButton>
+      </Navbar>
+      <SvgLanding>
+        <Image width={850} src={lisergicBg} alt="Lisergic Background" />
+      </SvgLanding>
+    </LandingWrapper>
   );
 }

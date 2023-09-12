@@ -1,4 +1,17 @@
 import StyledComponentsRegistry from "../lib/registry";
+import { Playfair_Display, Roboto_Mono } from "next/font/google";
+
+export const playfair_display = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair-display",
+  display: "swap",
+});
+
+export const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-roboto-mono",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -6,7 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html
+      lang="en-es"
+      className={`${playfair_display.variable} ${roboto_mono.variable}`}
+    >
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
