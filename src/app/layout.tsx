@@ -1,4 +1,5 @@
 import StyledComponentsRegistry from "../lib/registry";
+import { Analytics } from "@vercel/analytics/react";
 import { Playfair_Display, Roboto_Mono } from "next/font/google";
 
 export const playfair_display = Playfair_Display({
@@ -25,6 +26,7 @@ export default function RootLayout({
     >
       <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <Analytics />
       </body>
     </html>
   );
