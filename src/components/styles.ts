@@ -27,13 +27,11 @@ export const SectionButton = styled.div`
   variant: outlined;
 
   width: 50%;
-  font-style: Roboto;
 `;
 
 export const SectionText = styled.h1`
   variant: outlined;
-  height: 200px;
-  width: 50%;
+  font-size: 90px;
   font-style: Roboto;
   color: #afb2bb;
   text-decoration: none;
