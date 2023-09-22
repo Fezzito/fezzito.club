@@ -4,30 +4,40 @@ import Image from "next/image";
 import lisergicBg from "../../public/lisergicBg.svg";
 import {
   LandingWrapper,
-  Navbar,
-  SectionButton,
-  SectionText,
   SvgLanding,
+  Hero,
+  Navbar,
+  NavItem,
+  TextContainer,
+  LandingTitle,
+  LandingSubtitle,
 } from "@/components/styles";
 
 export default function Page() {
   return (
-    <LandingWrapper>
-      <Navbar>
-        <SectionButton>
+    <>
+      <LandingWrapper>
+        <Hero>
+          <TextContainer>
+            <LandingTitle>Fezzito.club</LandingTitle>
+            <LandingSubtitle>product & frontend </LandingSubtitle>
+          </TextContainer>
+          <SvgLanding>
+            <Image width={850} src={lisergicBg} alt="Lisergic Background" />
+          </SvgLanding>
+        </Hero>
+        <Navbar>
           <Link href={"/work"}>
-            <SectionText>Works</SectionText>
+            <NavItem>work</NavItem>
           </Link>
-        </SectionButton>
-        <SectionButton>
           <Link href={"/about"}>
-            <SectionText> About</SectionText>
+            <NavItem> about</NavItem>
           </Link>
-        </SectionButton>
-      </Navbar>
-      <SvgLanding>
-        <Image width={850} src={lisergicBg} alt="Lisergic Background" />
-      </SvgLanding>
-    </LandingWrapper>
+          <Link href={"/about"}>
+            <NavItem> contact</NavItem>
+          </Link>
+        </Navbar>
+      </LandingWrapper>
+    </>
   );
 }
