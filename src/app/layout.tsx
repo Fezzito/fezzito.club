@@ -1,6 +1,7 @@
 import StyledComponentsRegistry from "../lib/registry";
 import { Analytics } from "@vercel/analytics/react";
 import { Playfair_Display, Roboto_Mono } from "next/font/google";
+import { Providers } from "./providers";
 
 export const playfair_display = Playfair_Display({
   subsets: ["latin"],
@@ -21,11 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en-es"
+      lang="en"
       className={`${playfair_display.variable} ${roboto_mono.variable}`}
     >
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <Providers>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </Providers>
         <Analytics />
       </body>
     </html>

@@ -33,7 +33,7 @@ export default function Page() {
           <Link href={"/about"}>
             <NavItem> about</NavItem>
           </Link>
-          <Link href={"/about"}>
+          <Link href={"/contact"}>
             <NavItem> contact</NavItem>
           </Link>
         </Navbar>
