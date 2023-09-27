@@ -2,11 +2,6 @@
 "use client";
 
 import styled from "styled-components";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 
 export const LandingWrapper = styled.div`
   display: flex;
@@ -85,17 +80,10 @@ export const NavItem = styled.p`
 export const WorkWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
   background-color: #090909;
-`;
-
-export const StyledCard = styled(Card)`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  background-color: red;
+  overflow-y: scroll;
 `;
