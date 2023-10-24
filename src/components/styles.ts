@@ -2,54 +2,44 @@
 "use client";
 
 import styled from "styled-components";
+import Link from "next/link";
 
 export const LandingWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  box-sizing: border-box;
   background-color: #090909;
 `;
 
 export const Hero = styled.div`
   display: flex;
   flex-direction: row;
-`;
-
-export const TextContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 150px 40px 0 40px;
 `;
 
 export const LandingTitle = styled.h1`
   color: #afb2bb;
-  font-family: Rubik;
   font-size: 96px;
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
   line-height: normal;
+  width: 465px;
+  word-break: break-all;
+  transform: rotate(45deg);
 `;
 
 export const LandingSubtitle = styled.h2`
   color: #fff;
-  font-family: Roboto Mono;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-`;
-
-export const SvgLanding = styled.div`
-  width: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transform: rotate(90deg);
-  position: absolute;
-  bottom: 150px;
-  right: 0px;
+  width: 175px;
+  word-break: break-all;
+  margin: 50px 0px 0px 84px;
 `;
 
 export const Navbar = styled.div`
@@ -57,14 +47,33 @@ export const Navbar = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   position: absolute;
-  bottom: 0px;
-  width: 100%;
-  border-top: 1px solid #afb2bb;
+  bottom: 20px;
+  right: 32%;
+  gap: 25px;
+  border: 1px solid #afb2bb;
+  border-radius: 50px;
+  padding: 20px 20px;
 `;
 
-export const NavItem = styled.p`
+export const NavItem = styled(Link)`
   color: #afb2bb;
-  font-family: Rubik;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none !important;
+  border: 1px solid #afb2bb;
+  border-radius: 50px;
+  padding: 10px 35px;
+
+  &:hover {
+    color: #f2a900;
+    border: 1px solid #f2a900;
+  }
+`;
+
+export const SectionTitle = styled.h1`
+  color: #afb2bb;
   font-size: 50px;
   font-style: normal;
   font-weight: 500;
@@ -73,10 +82,9 @@ export const NavItem = styled.p`
   text-decoration: none !important;
 
   &:hover {
-    color: #4fbfc9;
+    color: #f2a900;
   }
 `;
-
 export const WorkWrapper = styled.div`
   display: flex;
   flex-direction: column;
