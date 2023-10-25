@@ -4,6 +4,7 @@ import medium from "../../public/medium.png";
 import github from "../../public/github.png";
 import linkedin from "../../public/linkedin.png";
 import wip from "../../public/wip.png";
+import questionmark from "../../public/questionmark.png";
 
 export const myWorks = [
   {
@@ -113,5 +114,44 @@ export const mySocials = [
     url: "https://mail.google.com/mail/?view=cm&fs=1&to=ftzeitler@gmail.com&su=ContactFromYourWebpage&body=HelloFezzito",
     shortDescription: "",
     className: "w-full h-[300px] col-span-10 sm:col-span-5 m-2",
+  },
+];
+
+export const aboutMe = [
+  {
+    title: "BeHance",
+    shortDescription: "",
+    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
+    image: questionmark.src,
+  },
+  {
+    title: "Github",
+    shortDescription: "",
+    className: "w-full h-[300px] col-span-10 sm:col-span-5 m-2",
+    image: questionmark.src,
+  },
+  {
+    title: "LinkedIn",
+    shortDescription: "",
+    className: "col-span-12 sm:col-span-3 h-[300px] m-2",
+    image: questionmark.src,
+  },
+  {
+    title: "Medium",
+    shortDescription: "",
+    className: "col-span-12 sm:col-span-6 h-[300px] m-2",
+    image: questionmark.src,
+  },
+  {
+    title: "Gmail",
+    shortDescription: "",
+    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
+    image: questionmark.src,
+  },
+  {
+    title: "BeHance",
+    shortDescription: "",
+    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
+    image: questionmark.src,
   },
 ];
