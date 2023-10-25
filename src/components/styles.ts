@@ -35,7 +35,7 @@ export const LandingSubtitle = styled.h2`
   color: #fff;
   font-size: 32px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   line-height: normal;
   width: 175px;
   word-break: break-all;
@@ -59,7 +59,7 @@ export const NavItem = styled(Link)`
   color: #afb2bb;
   font-size: 35px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   line-height: normal;
   text-decoration: none !important;
   border: 1px solid #afb2bb;
@@ -67,8 +67,9 @@ export const NavItem = styled(Link)`
   padding: 10px 35px;
 
   &:hover {
-    color: #f2a900;
-    border: 1px solid #f2a900;
+    color: #ff4df0;
+    border: 2px solid #70ffdf;
+    font-weight: 500;
   }
 `;
 
@@ -82,7 +83,7 @@ export const SectionTitle = styled.h1`
   text-decoration: none !important;
 
   &:hover {
-    color: #f2a900;
+    color: #ff4df0;
   }
 `;
 export const WorkWrapper = styled.div`
