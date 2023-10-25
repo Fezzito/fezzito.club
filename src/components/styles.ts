@@ -18,6 +18,12 @@ export const Hero = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 150px 40px 0 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 `;
 
 export const LandingTitle = styled.h1`
@@ -29,6 +35,13 @@ export const LandingTitle = styled.h1`
   width: 465px;
   word-break: break-all;
   transform: rotate(45deg);
+
+  @media (max-width: 768px) {
+    font-size: 60px;
+    font-style: bold;
+    font-weight: 600;
+    width: 320px;
+  }
 `;
 
 export const LandingSubtitle = styled.h2`
@@ -39,7 +52,12 @@ export const LandingSubtitle = styled.h2`
   line-height: normal;
   width: 175px;
   word-break: break-all;
-  margin: 50px 0px 0px 84px;
+  transform: rotate(-45deg);
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+    width: 145px;
+  }
 `;
 
 export const Navbar = styled.div`
@@ -48,11 +66,17 @@ export const Navbar = styled.div`
   justify-content: space-evenly;
   position: absolute;
   bottom: 20px;
-  right: 32%;
+  right: 37%;
   gap: 25px;
   border: 1px solid #afb2bb;
-  border-radius: 50px;
+  border-radius: 60px;
   padding: 20px 20px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    right: 2%;
+    padding: 10px 10px;
+  }
 `;
 
 export const NavItem = styled(Link)`
@@ -70,6 +94,12 @@ export const NavItem = styled(Link)`
     color: #ff4df0;
     border: 2px solid #70ffdf;
     font-weight: 500;
+    transition: all 0.5s ease-in;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    padding: 8px 20px;
   }
 `;
 
@@ -79,11 +109,13 @@ export const SectionTitle = styled.h1`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin: 15px 0 0 0;
-  text-decoration: none !important;
+  margin: 30px 0;
 
   &:hover {
     color: #ff4df0;
+    transition: all 0.5s ease-in;
+    font-weight: 600;
+    font-size: 55px;
   }
 `;
 export const WorkWrapper = styled.div`

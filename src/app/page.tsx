@@ -14,16 +14,22 @@ export default function Page() {
     <>
       <Head>
         <title>Fezzito.club</title>
+        <meta name="title" property="og:title" content="Fezzito.club" />
         <meta
           name="description"
-          content="UX Research, product development & frontend."
+          content="Welcome to my hub. Product, research and frontend, all in one. Enjoy!."
         />
-        <meta property="og:title" content="Fezzito.club" />
         <meta
+          name="description"
           property="og:description"
-          content="Explora mi portfolio y mis proyectos."
+          content="Explore my portfolio and wide array of work."
         />
-        <meta property="og:image" content="../../public/opengraphimg.png" />
+        <meta
+          name="image"
+          property="og:image"
+          content="https://www.fezzito.club/opengraphimg.png"
+        />
+        <meta name="author" content="Fezzito"></meta>
         <meta
           name="keywords"
           content="UX, Development, Design, UX Research, Product, Research, Portfolio"
@@ -45,8 +51,8 @@ export default function Page() {
           <LandingSubtitle>research, product & frontend </LandingSubtitle>
         </Hero>
         <Navbar>
+          {/* <NavItem href={"/about"}> about</NavItem> */}
           <NavItem href={"/work"}>work</NavItem>
-          <NavItem href={"/about"}> about</NavItem>
           <NavItem href={"/contact"}> contact</NavItem>
         </Navbar>
       </LandingWrapper>
