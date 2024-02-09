@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import {
   LandingWrapper,
   Hero,
@@ -10,6 +12,13 @@ import {
 import Head from "next/head";
 
 export default function Page() {
+  //handleo de la animacion
+  const [animate, setAnimate] = useState(true);
+
+  useEffect(() => {
+    setAnimate(false);
+  }, []);
+
   return (
     <>
       <Head>
@@ -47,11 +56,14 @@ export default function Page() {
       </Head>
       <LandingWrapper>
         <Hero>
-          <LandingTitle>Fezzito.club</LandingTitle>
-          <LandingSubtitle>research, product & frontend </LandingSubtitle>
+          {[...Array(5)].map((_, index) => (
+            <LandingTitle key={index} animate={animate} index={index}>
+              fessito.club
+            </LandingTitle>
+          ))}
         </Hero>
         <Navbar>
-          {/* <NavItem href={"/about"}> about</NavItem> */}
+          <LandingSubtitle>research, product & frontend </LandingSubtitle>
           <NavItem href={"/work"}>work</NavItem>
           <NavItem href={"/contact"}> contact</NavItem>
         </Navbar>
