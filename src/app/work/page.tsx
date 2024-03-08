@@ -34,9 +34,9 @@ export default function Page() {
                   radius="full"
                   size="sm"
                 >
-                  {/* <a href={`${item.url}`} target="blank"> */}
-                  GO!
-                  {/* </a> */}
+                  <a href={`${item.url}`} target="blank">
+                    GO!
+                  </a>
                 </Button>
               </CardFooter>
             </Card>
