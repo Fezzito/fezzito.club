@@ -3,79 +3,66 @@ import gmail from "../../public/gmail.png";
 import medium from "../../public/medium.png";
 import github from "../../public/github.png";
 import linkedin from "../../public/linkedin.png";
-import wip from "../../public/wip.png";
-import questionmark from "../../public/questionmark.png";
+import pen from "../../public/pen.png";
+import pencil from "../../public/pencil.png";
+import code from "../../public/code.png";
 
 export const myWorks = [
   {
-    title: "My latest work",
+    title: "Kennel redesign",
     descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "https://www.google.com",
+    imagen: pencil.src,
+    url: "https://www.behance.net/gallery/100261651/Canil-transportable-4X",
     className: "h-[300px] col-span-10 sm:col-span-5 m-2",
   },
   {
-    title: "My latest work",
+    title: "Billetera Santa Fe UX Case",
     descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "../../../public/wip.jpg",
+    imagen: pencil.src,
+    url: "https://www.behance.net/gallery/183619529/Billetera-Santa-Fe-UX-Research-Case-Study",
     className: "col-span-12 sm:col-span-3 h-[300px] m-2",
   },
   {
-    title: "My latest work",
+    title: "Blackout curtain design",
     descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "https://www.google.com",
+    imagen: pencil.src,
+    url: "https://www.behance.net/gallery/180032921/Elevador-de-cortina-tipo-blackout",
     className: "col-span-12 sm:col-span-8 h-[300px] m-2",
   },
   {
-    title: "My latest work",
+    title: "Vulgar display of dogecoin",
     descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "../../../public/wip.png",
+    imagen: pen.src,
+    url: "https://medium.com/@ftzeitler/vulgar-display-of-dogecoin-b06ca529bddc",
     className: "w-full h-[300px] col-span-10 sm:col-span-5 m-2",
   },
   {
-    title: "My latest work",
+    title: "Obras del diseño de la Argentina industrialista",
     descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "https://www.google.com",
+    imagen: pen.src,
+    url: "https://medium.com/@ftzeitler/obras-del-dise%C3%B1o-de-la-argentina-industrialista-f79d9b9e57d0",
     className: "w-full h-[300px] col-span-12 sm:col-span-7 m-2",
   },
   {
-    title: "My latest work",
+    title: "Snake game",
     descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "https://www.google.com",
+    imagen: code.src,
+    url: "https://github.com/Fezzito/viborita",
     className: "h-[300px] col-span-10 sm:col-span-5 m-2",
   },
   {
-    title: "My latest work",
+    title: "My first portfolio",
     descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "../../../public/wip.jpg",
+    imagen: code.src,
+    url: "https://github.com/Fezzito/portfolio",
     className: "col-span-8 sm:col-span-4 h-[300px] m-2",
   },
   {
-    title: "My latest work",
+    title: "My first ever webpage",
     descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "https://www.google.com",
+    imagen: code.src,
+    url: "https://retos-summerhack.web.app/",
     className: "col-span-10 sm:col-span-4 h-[300px] m-2",
-  },
-  {
-    title: "My latest work",
-    descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "../../../public/wip.png",
-    className: "w-full h-[300px] col-span-12 sm:col-span-5 m-2",
-  },
-  {
-    title: "My latest work",
-    descripcion: "Work in progress. Available soon!",
-    imagen: wip.src,
-    url: "https://www.google.com",
-    className: "w-full h-[300px] col-span-12 sm:col-span-7 m-2",
   },
 ];
 
@@ -114,44 +101,5 @@ export const mySocials = [
     url: "https://mail.google.com/mail/?view=cm&fs=1&to=ftzeitler@gmail.com&su=ContactFromYourWebpage&body=HelloFezzito",
     shortDescription: "",
     className: "w-full h-[300px] col-span-10 sm:col-span-5 m-2",
-  },
-];
-
-export const aboutMe = [
-  {
-    title: "BeHance",
-    shortDescription: "",
-    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
-    image: questionmark.src,
-  },
-  {
-    title: "Github",
-    shortDescription: "",
-    className: "w-full h-[300px] col-span-10 sm:col-span-5 m-2",
-    image: questionmark.src,
-  },
-  {
-    title: "LinkedIn",
-    shortDescription: "",
-    className: "col-span-12 sm:col-span-3 h-[300px] m-2",
-    image: questionmark.src,
-  },
-  {
-    title: "Medium",
-    shortDescription: "",
-    className: "col-span-12 sm:col-span-6 h-[300px] m-2",
-    image: questionmark.src,
-  },
-  {
-    title: "Gmail",
-    shortDescription: "",
-    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
-    image: questionmark.src,
-  },
-  {
-    title: "BeHance",
-    shortDescription: "",
-    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
-    image: questionmark.src,
   },
 ];

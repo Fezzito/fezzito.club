@@ -9,8 +9,6 @@ interface TitleProps {
   index: number;
 }
 
-const mobileFontSizes = [8, 24, 40, 56, 72]; // Valores de tamaño de fuente para dispositivos móviles
-
 const changeFontSize = keyframes`
 0% { font-size: 48px; }
 20% { font-size: 64px; }
@@ -21,11 +19,11 @@ const changeFontSize = keyframes`
 `;
 
 const changeFontSizeMobile = keyframes`
-0%, 100% { font-size: ${mobileFontSizes[0]}px; }
-20% { font-size: ${mobileFontSizes[1]}px; }
-40% { font-size: ${mobileFontSizes[2]}px; }
-60% { font-size: ${mobileFontSizes[3]}px; }
-80% { font-size: ${mobileFontSizes[4]}px; }
+0%, 100% { font-size: 8px; }
+20% { font-size: 24px; }
+40% { font-size: 40px; }
+60% { font-size: 56px; }
+80% { font-size: 72px; }
 `;
 
 //si no se usa con css los keyframes no funcionan, cambios de v3 a v4 de styled components
@@ -44,16 +42,6 @@ export const LandingTitle = styled.h1<TitleProps>`
       animation: ${css`
           ${changeFontSize}`} 7s ease-in-out;
     `}
-
-  @media (max-width: 768px) {
-    ${({ animate }) =>
-      animate &&
-      animate.toString() === "true" &&
-      css`
-        animation: ${changeFontSizeMobile} 7s ease-in-out;
-        font-size: ${changeFontSizeMobile};
-      `}
-  }
 `;
 
 export const LandingWrapper = styled.div`
@@ -121,20 +109,6 @@ export const NavItem = styled(Link)`
   }
 `;
 
-export const SectionTitle = styled.h1`
-  color: #040405;
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin: 30px 0;
-
-  &:hover {
-    transition: all 0.5s ease-in;
-    font-weight: 600;
-    font-size: 55px;
-  }
-`;
 export const WorkWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -142,6 +116,16 @@ export const WorkWrapper = styled.div`
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  background-color: #090909;
+  background-color: #040405;
   overflow-y: scroll;
+`;
+
+export const SectionTitle = styled.h1`
+  color: #f8d909;
+  font-style: bold;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: normal;
+  margin: 20px 0px;
+  width: fit-content;
 `;

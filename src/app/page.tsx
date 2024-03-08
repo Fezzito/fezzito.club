@@ -14,6 +14,13 @@ import Head from "next/head";
 export default function Page() {
   //handleo de la animacion
   const [animate, setAnimate] = useState(true);
+  const landingArray = [
+    "design",
+    "product",
+    "research",
+    "&frontend",
+    "fezzito.club",
+  ];
 
   useEffect(() => {
     setAnimate(false);
@@ -56,14 +63,18 @@ export default function Page() {
       </Head>
       <LandingWrapper>
         <Hero>
-          {[...Array(5)].map((_, index) => (
-            <LandingTitle key={index} animate={animate} index={index}>
-              fessito.club
+          {landingArray.map((item, index) => (
+            <LandingTitle
+              key={index}
+              animate={animate}
+              index={index}
+              style={{ fontSize: `${48 + index * 16}px` }}
+            >
+              {item}
             </LandingTitle>
           ))}
         </Hero>
         <Navbar>
-          <LandingSubtitle>research, product & frontend </LandingSubtitle>
           <NavItem href={"/work"}>work</NavItem>
           <NavItem href={"/contact"}> contact</NavItem>
         </Navbar>
