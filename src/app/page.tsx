@@ -30,36 +30,32 @@ export default function Page() {
     <>
       <Head>
         <title>Fezzito.club</title>
-        <meta name="title" property="og:title" content="Fezzito.club" />
+        <meta property="og:title" content="Fezzito.club" />
+        <meta property="og:url" content="https://www.fezzito.club/" />
         <meta
-          name="description"
+          property="og:description"
           content="Welcome to my hub. Product, research and frontend, all in one. Enjoy!."
         />
         <meta
-          name="description"
-          property="og:description"
-          content="Explore my portfolio and wide array of work."
-        />
-        <meta
-          name="image"
           property="og:image"
           content="https://www.fezzito.club/opengraphimg.png"
         />
-        <meta name="author" content="Fezzito"></meta>
+        <meta name="author" content="Fezzito" />
         <meta
           name="keywords"
           content="UX, Development, Design, UX Research, Product, Research, Portfolio"
         />
-        <meta
-          http-equiv="content-type"
-          content="text/html; charset=UTF-8"
-        ></meta>
-        <meta name="language" content="English"></meta>
-        <meta name="robots" content="index, follow"></meta>
-        <meta property="og:url" content="https://www.fezzito.club/" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta content="text/html; charset=UTF-8" name="Content-Type" />
+        <meta name="language" content="English" />
+        <meta name="robots" content="index, follow" />
         <meta name="geo.placename" content="Buenos Aires, Argentina" />
         <meta name="geo.position" content="-34.61315;-58.37723" />
         <meta name="copyright" content="© 2023 - Fezzito" />
+        {/* twitter card markup */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@fezzit0" />
+        <meta name="twitter:creator" content="@fezzit0" />
       </Head>
       <LandingWrapper>
         <Hero>

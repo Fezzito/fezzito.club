@@ -18,14 +18,6 @@ const changeFontSize = keyframes`
 100% { font-size: 128px; }
 `;
 
-const changeFontSizeMobile = keyframes`
-0%, 100% { font-size: 8px; }
-20% { font-size: 24px; }
-40% { font-size: 40px; }
-60% { font-size: 56px; }
-80% { font-size: 72px; }
-`;
-
 //si no se usa con css los keyframes no funcionan, cambios de v3 a v4 de styled components
 export const LandingTitle = styled.h1<TitleProps>`
   color: #f8d909;

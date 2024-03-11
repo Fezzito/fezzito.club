@@ -30,6 +30,20 @@ export const myWorks = [
     className: "col-span-12 sm:col-span-8 h-[300px] m-2",
   },
   {
+    title: "My first portfolio",
+    descripcion: "Work in progress. Available soon!",
+    imagen: code.src,
+    url: "https://github.com/Fezzito/portfolio",
+    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
+  },
+  {
+    title: "My first ever webpage",
+    descripcion: "Work in progress. Available soon!",
+    imagen: code.src,
+    url: "https://retos-summerhack.web.app/",
+    className: "col-span-10 sm:col-span-4 h-[300px] m-2",
+  },
+  {
     title: "Vulgar display of dogecoin",
     descripcion: "Work in progress. Available soon!",
     imagen: pen.src,
@@ -48,21 +62,7 @@ export const myWorks = [
     descripcion: "Work in progress. Available soon!",
     imagen: code.src,
     url: "https://github.com/Fezzito/viborita",
-    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
-  },
-  {
-    title: "My first portfolio",
-    descripcion: "Work in progress. Available soon!",
-    imagen: code.src,
-    url: "https://github.com/Fezzito/portfolio",
     className: "col-span-8 sm:col-span-4 h-[300px] m-2",
-  },
-  {
-    title: "My first ever webpage",
-    descripcion: "Work in progress. Available soon!",
-    imagen: code.src,
-    url: "https://retos-summerhack.web.app/",
-    className: "col-span-10 sm:col-span-4 h-[300px] m-2",
   },
 ];
 
