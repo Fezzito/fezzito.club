@@ -17,15 +17,20 @@ const changeFontSize = keyframes`
 80% { font-size: 112px; }
 100% { font-size: 128px; }
 `;
-
+export const Hidden = styled.h1`
+  background-color: transparent;
+  color: transparent;
+  font-size: 1px;
+`;
 //si no se usa con css los keyframes no funcionan, cambios de v3 a v4 de styled components
-export const LandingTitle = styled.h1<TitleProps>`
+export const LandingTitle = styled.h2<TitleProps>`
   color: #f8d909;
   background-color: #040405;
   font-style: bold;
   font-weight: 700;
   line-height: normal;
   margin: 0;
+
   width: fit-content;
 
   ${({ animate }) =>
@@ -34,6 +39,14 @@ export const LandingTitle = styled.h1<TitleProps>`
       animation: ${css`
           ${changeFontSize}`} 7s ease-in-out;
     `}
+
+  @media (max-width: 650px) {
+    font-size: 5em !important;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 4em !important;
+  }
 `;
 
 export const LandingWrapper = styled.div`
@@ -42,6 +55,10 @@ export const LandingWrapper = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #f8d909;
+
+  @media (max-width: 650px) {
+    background-color: #040405;
+  }
 `;
 
 export const Hero = styled.div`
@@ -49,7 +66,7 @@ export const Hero = styled.div`
   flex-direction: column;
 `;
 
-export const LandingSubtitle = styled.h2`
+export const LandingSubtitle = styled.h3`
   color: #040405;
   font-size: 24px;
   font-style: normal;
@@ -69,7 +86,7 @@ export const Navbar = styled.div`
   align-items: center;
   position: absolute;
   bottom: 20px;
-  right: 30%;
+  right: 35%;
   gap: 25px;
   padding: 20px 20px;
 
@@ -98,6 +115,12 @@ export const NavItem = styled(Link)`
   @media (max-width: 768px) {
     font-size: 20px;
     padding: 8px 20px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 30px;
+    color: #f8d909;
+    padding: 20px;
   }
 `;
 

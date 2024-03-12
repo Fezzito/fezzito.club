@@ -7,7 +7,7 @@ import {
   Navbar,
   NavItem,
   LandingTitle,
-  LandingSubtitle,
+  Hidden,
 } from "@/components/styles";
 import Head from "next/head";
 
@@ -38,27 +38,40 @@ export default function Page() {
         />
         <meta
           property="og:image"
-          content="https://www.fezzito.club/opengraphimg.png"
+          content="https://www.fezzito.club/opengraphimg.svg"
         />
-        <meta name="author" content="Fezzito" />
         <meta
-          name="keywords"
+          property="og:image:url"
+          content="https://www.fezzito.club/opengraphimg.svg"
+        />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="315" />
+        <meta property="author" content="Fezzito" />
+        <meta
+          property="keywords"
           content="UX, Development, Design, UX Research, Product, Research, Portfolio"
         />
+        <meta
+          property="og:site_name"
+          content="Ux research, product desing and frontend at your service"
+        />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <meta content="text/html; charset=UTF-8" name="Content-Type" />
-        <meta name="language" content="English" />
-        <meta name="robots" content="index, follow" />
-        <meta name="geo.placename" content="Buenos Aires, Argentina" />
-        <meta name="geo.position" content="-34.61315;-58.37723" />
-        <meta name="copyright" content="© 2023 - Fezzito" />
+        <meta property="og:locale" content="en_US" />
+        <meta content="text/html; charset=UTF-8" property="Content-Type" />
+        <meta property="language" content="English" />
+        <meta property="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="geo.placename" content="Buenos Aires, Argentina" />
+        <meta property="geo.position" content="-34.61315;-58.37723" />
+        <meta property="copyright" content="© 2023 - Fezzito" />
         {/* twitter card markup */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@fezzit0" />
-        <meta name="twitter:creator" content="@fezzit0" />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="@fezzit0" />
+        <meta property="twitter:creator" content="@fezzit0" />
       </Head>
       <LandingWrapper>
         <Hero>
+          <Hidden>Fezzito.club</Hidden>
           {landingArray.map((item, index) => (
             <LandingTitle
               key={index}
