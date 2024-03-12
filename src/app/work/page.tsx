@@ -13,7 +13,7 @@ export default function Page() {
       {/* <div className="max-w-[1260px] gap-2 px-8"> */}
       <div className="grid grid-cols-1 md:grid-cols-10 grid-rows-4 auto-rows-[1fr] ">
         {myWorks.map((item, index) => (
-          <Card isFooterBlurred className={item.className} key={index}>
+          <Card className={item.className} key={index}>
             <CardHeader className="absolute bg-white/30 z-10 top-0 flex-col items-start">
               <h4 className="text-black font-medium text-2xl">{item.title}</h4>
             </CardHeader>
@@ -23,12 +23,9 @@ export default function Page() {
               className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
               src={item.imagen}
             />
-            <CardFooter className="absolute bg-white/30 bottom-0 border-t-1 border-zinc-100/50 z-10 justify-between">
-              <div>
-                <p className="text-black text-tiny">{item.descripcion}</p>
-              </div>
+            <CardFooter className="absolute bg-transparent bottom-0 border-transparent z-10 ">
               <Button
-                className="bg-black/30 hover:bg-orange-500 text-white font-bold"
+                className="bg-black/30 hover:bg-yellow-500 text-white font-bold"
                 radius="full"
                 size="sm"
               >

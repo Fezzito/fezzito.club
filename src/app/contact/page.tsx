@@ -25,11 +25,6 @@ export default function Page() {
                 src={item.image}
               />
               <CardFooter className="absolute bg-white/0  bottom-0 z-10 justify-between">
-                <div>
-                  <p className="text-black text-medium">
-                    {item.shortDescription}
-                  </p>
-                </div>
                 <Button
                   className="bg-black/30 hover:bg-blue-700 text-white font-bold"
                   radius="full"
