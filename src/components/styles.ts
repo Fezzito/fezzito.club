@@ -86,7 +86,7 @@ export const Navbar = styled.div`
   align-items: center;
   position: absolute;
   bottom: 20px;
-  right: 35%;
+  right: 40%;
   gap: 25px;
   padding: 20px 20px;
 
@@ -137,8 +137,6 @@ export const WorkWrapper = styled.div`
 
 export const SectionTitle = styled.h1`
   color: #f8d909;
-  font-style: bold;
-  font-weight: 700;
   font-size: 60px;
   line-height: normal;
   margin: 20px 0px;
