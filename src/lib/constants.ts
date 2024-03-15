@@ -21,9 +21,9 @@ export const myWorks = [
     className: "col-span-12 sm:col-span-3 h-[300px] m-2",
   },
   {
-    title: "Blackout curtain design",
-    imagen: pencil.src,
-    url: "https://www.behance.net/gallery/180032921/Elevador-de-cortina-tipo-blackout",
+    title: "Obras del diseño de la Argentina industrialista",
+    imagen: pen.src,
+    url: "https://medium.com/@ftzeitler/obras-del-dise%C3%B1o-de-la-argentina-industrialista-f79d9b9e57d0",
     className: "col-span-12 sm:col-span-8 h-[300px] m-2",
   },
   {
@@ -45,9 +45,9 @@ export const myWorks = [
     className: "w-full h-[300px] col-span-10 sm:col-span-5 m-2",
   },
   {
-    title: "Obras del diseño de la Argentina industrialista",
-    imagen: pen.src,
-    url: "https://medium.com/@ftzeitler/obras-del-dise%C3%B1o-de-la-argentina-industrialista-f79d9b9e57d0",
+    title: "Blackout curtain design",
+    imagen: pencil.src,
+    url: "https://www.behance.net/gallery/180032921/Elevador-de-cortina-tipo-blackout",
     className: "w-full h-[300px] col-span-12 sm:col-span-7 m-2",
   },
   {

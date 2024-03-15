@@ -10,6 +10,12 @@ import {
   Hidden,
 } from "@/components/styles";
 import Head from "next/head";
+import { Bebas_Neue } from "next/font/google";
+import { Lato } from "next/font/google";
+
+//cuando se usa en una pagina especifica se tiene que declarar afuera de la funcion para evitar problemas de scope
+const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
+const lato = Lato({ subsets: ["latin"], weight: "400" });
 
 export default function Page() {
   //handleo de la animacion
@@ -78,14 +84,20 @@ export default function Page() {
               animate={animate}
               index={index}
               style={{ fontSize: `${48 + index * 16}px` }}
+              className={bebas_neue.className}
             >
               {item}
             </LandingTitle>
           ))}
         </Hero>
         <Navbar>
-          <NavItem href={"/work"}>work</NavItem>
-          <NavItem href={"/contact"}> contact</NavItem>
+          <NavItem href={"/work"} className={lato.className}>
+            work
+          </NavItem>
+          <NavItem href={"/contact"} className={lato.className}>
+            {" "}
+            contact
+          </NavItem>
         </Navbar>
       </LandingWrapper>
     </>
