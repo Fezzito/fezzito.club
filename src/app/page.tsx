@@ -95,7 +95,6 @@ export default function Page() {
             work
           </NavItem>
           <NavItem href={"/contact"} className={lato.className}>
-            {" "}
             contact
           </NavItem>
         </Navbar>
