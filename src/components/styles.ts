@@ -2,7 +2,7 @@
 "use client";
 
 import styled, { css, keyframes } from "styled-components";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 
 interface TitleProps {
   animate?: boolean; //si lo declaro inline llora Typescript
