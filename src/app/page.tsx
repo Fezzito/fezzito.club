@@ -97,6 +97,9 @@ export default function Page() {
           <NavItem href={"/contact"} className={lato.className}>
             contact
           </NavItem>
+          <NavItem href={"/about"} className={lato.className}>
+            about
+          </NavItem>
         </Navbar>
       </LandingWrapper>
     </>

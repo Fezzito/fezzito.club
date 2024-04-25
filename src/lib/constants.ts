@@ -9,52 +9,61 @@ import code from "../../public/code.svg";
 
 export const myWorks = [
   {
-    title: "Kennel redesign",
+    title: "Design",
+    subtitle: "Kennel redesign",
     imagen: pencil.src,
     url: "https://www.behance.net/gallery/100261651/Canil-transportable-4X",
-    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
+    description: "",
   },
   {
-    title: "Billetera Santa Fe UX Case",
+    title: "Ux Research",
+    subtitle: "Billetera Santa Fe UX Case",
     imagen: pencil.src,
     url: "https://www.behance.net/gallery/183619529/Billetera-Santa-Fe-UX-Research-Case-Study",
-    className: "col-span-12 sm:col-span-3 h-[300px] m-2",
+    description: "",
   },
   {
-    title: "Obras del diseño de la Argentina industrialista",
+    title: "Writing",
+    subtitle: "Obras del diseño de la Argentina industrialista",
     imagen: pen.src,
     url: "https://medium.com/@ftzeitler/obras-del-dise%C3%B1o-de-la-argentina-industrialista-f79d9b9e57d0",
-    className: "col-span-12 sm:col-span-8 h-[300px] m-2",
+    description: "",
   },
   {
-    title: "My first portfolio",
+    title: "Frontend",
+    subtitle: "My first portfolio",
     imagen: code.src,
     url: "https://github.com/Fezzito/portfolio",
-    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
+    description: "",
   },
   {
-    title: "My first ever webpage",
+    title: "Frontend",
+    subtitle: "My first ever webpage",
     imagen: code.src,
     url: "https://retos-summerhack.web.app/",
-    className: "col-span-10 sm:col-span-4 h-[300px] m-2",
+    description: "",
   },
   {
-    title: "Vulgar display of dogecoin",
+    title: "Writing",
+    subtitle: "Vulgar display of dogecoin",
     imagen: pen.src,
     url: "https://medium.com/@ftzeitler/vulgar-display-of-dogecoin-b06ca529bddc",
-    className: "w-full h-[300px] col-span-10 sm:col-span-5 m-2",
+    description: "",
   },
   {
-    title: "Blackout curtain design",
+    title: "Design",
+    subtitle: "Blackout curtain design",
     imagen: pencil.src,
     url: "https://www.behance.net/gallery/180032921/Elevador-de-cortina-tipo-blackout",
-    className: "w-full h-[300px] col-span-12 sm:col-span-7 m-2",
+    description: "",
   },
   {
-    title: "Snake game",
+    title: "Frontend",
+    subtitle: "Snake game",
     imagen: code.src,
     url: "https://github.com/Fezzito/viborita",
-    className: "col-span-8 sm:col-span-4 h-[300px] m-2",
+    description:
+      "My first complex piece of code written following tutorials and code guides. No canvas nor frameworks, just vanilla JS and HTML",
   },
 ];
 
@@ -63,30 +72,84 @@ export const mySocials = [
     title: "BeHance",
     image: behance.src,
     url: "https://www.behance.net/feerzeitler",
-    className: "h-[300px] col-span-10 sm:col-span-5 m-2",
   },
   {
     title: "Github",
     image: github.src,
     url: "https://github.com/Fezzito",
-    className: "w-full h-[300px] col-span-10 sm:col-span-5 m-2",
   },
   {
     title: "LinkedIn",
     image: linkedin.src,
     url: "https://www.linkedin.com/in/fernando-zeitler/",
-    className: "col-span-12 sm:col-span-3 h-[300px] m-2",
   },
   {
     title: "Medium",
     image: medium.src,
     url: "https://medium.com/@ftzeitler",
-    className: "col-span-12 sm:col-span-6 h-[300px] m-2",
   },
   {
     title: "Gmail",
     image: gmail.src,
     url: "https://mail.google.com/mail/?view=cm&fs=1&to=ftzeitler@gmail.com&su=ContactFromYourWebpage&body=HelloFezzito",
-    className: "w-full h-[300px] col-span-10 sm:col-span-5 m-2",
   },
+];
+
+export const aboutEducation = [
+  {
+    title: "Universidad Nacional del Litoral",
+    position: "Licenciatura en diseño industrial",
+    date: "2017-2024",
+  },
+  {
+    title: "SummerHack bootcamp",
+    position: "Frontend developer",
+    date: "2022-2022",
+  },
+  {
+    title: "CSWP–Academic",
+    position: "Mechanical Design Academic Version",
+    date: "2020-2020",
+  },
+];
+
+export const aboutWork = [
+  {
+    title: "LIBRODEPASES",
+    position: "Frontend Developer",
+    description:
+      "Translated Figma designs into functional code, integrated RESTful dbs into the frontend",
+    date: "2022-2023",
+    chip: "Development",
+  },
+  {
+    title: "Facultad de arquitectura, diseño y urbanismo",
+    position: "UX research",
+    description:
+      "Worked in various projects using methodologies such as user-centered design and context-driven design. Gathered quantitative and qualitative data and traslated it into useful insights",
+    date: "2020-2022",
+    chip: "Research",
+  },
+  {
+    title: "Freelance",
+    position: "3D Designer",
+    description:
+      "Designed and 3d modelled pieces for 3d printing, made blueprints and exploded views if requested by the clients, made mockups via rendering process",
+    date: "2018-2020",
+    chip: "Design",
+  },
+];
+
+export const skillsArray = [
+  "Typescript",
+  "React",
+  "Figma",
+  "Git",
+  "SolidWorks",
+  "Keyshot",
+  "Illustrator",
+  "Photoshop",
+];
+export const shortDesc = [
+  "Passionate about creating, wether is a new product, a frontend side project or a 3D aplliance i need to print. Self taught and motivate-driven i tend to explore as many resources as i can, that drove me from industrial design, to frontend developer, to 3D modeler",
 ];

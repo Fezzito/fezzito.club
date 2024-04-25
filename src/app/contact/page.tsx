@@ -1,45 +1,56 @@
 "use client";
 import React from "react";
-import { Card, CardHeader, CardFooter, Image, Button } from "@nextui-org/react";
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  Image,
+  CardBody,
+  Divider,
+  Link,
+} from "@nextui-org/react";
 import { SectionTitle, WorkWrapper } from "@/components/styles";
 import { mySocials } from "@/lib/constants";
 import { Lato, Bebas_Neue } from "next/font/google";
 import "tailwindcss/tailwind.css";
 
 const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
-const lato = Lato({ subsets: ["latin"], weight: "900" });
 
 export default function Page() {
   return (
     <WorkWrapper>
       <SectionTitle className={bebas_neue.className}>Contact</SectionTitle>
-      <div className="max-w-[1260px] gap-2 px-8">
-        <div className="grid grid-cols-1 md:grid-cols-10 grid-rows-4 auto-rows-[1fr] ">
-          {mySocials.map((item, index) => (
-            <Card isFooterBlurred className={item.className} key={index}>
-              <CardHeader className="absolute bg-white/30 z-10 top-0 flex-col items-start">
-                <h4 className={lato.className}>{item.title}</h4>
-              </CardHeader>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 grid-rows-4 auto-rows-[1fr] ">
+        {mySocials.map((item, index) => (
+          <Card
+            key={index}
+            isPressable={true}
+            style={{ backgroundColor: "#4C4C4C" }}
+          >
+            <CardHeader className="flex gap-3">
               <Image
-                removeWrapper
-                alt="Card example background"
-                className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
+                alt="nextui logo"
+                height={50}
+                radius="lg"
                 src={item.image}
+                width={50}
               />
-              <CardFooter className="absolute bg-white/0  bottom-0 z-10 justify-between">
-                <Button
-                  className="bg-black/30 hover:bg-yellow-700 text-white font-bold"
-                  radius="full"
-                  size="md"
-                >
-                  <a href={`${item.url}`} target="blank">
-                    GO
-                  </a>
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+              <div className="flex flex-col">
+                <p className="text-tiny uppercase font-bold">{item.title}</p>
+              </div>
+            </CardHeader>
+            <Divider style={{ backgroundColor: "#A3AABF" }} />
+            <CardBody>
+              <p className="font-bold text-large">{item.title}</p>
+            </CardBody>
+            <Divider style={{ backgroundColor: "#A3AABF" }} />
+            <CardFooter>
+              <Link isExternal showAnchorIcon href={`${item.url}`}>
+                Visit.
+              </Link>
+            </CardFooter>
+          </Card>
+        ))}
       </div>
     </WorkWrapper>
   );

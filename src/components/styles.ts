@@ -24,7 +24,7 @@ export const Hidden = styled.h1`
 `;
 //si no se usa con css los keyframes no funcionan, cambios de v3 a v4 de styled components
 export const LandingTitle = styled.h2<TitleProps>`
-  color: #f8d909;
+  color: #a3aabf;
   background-color: #040405;
   font-style: bold;
   font-weight: 700;
@@ -54,7 +54,7 @@ export const LandingWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: #f8d909;
+  background-color: #a3aabf;
 
   @media (max-width: 650px) {
     background-color: #040405;
@@ -129,16 +129,87 @@ export const WorkWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  padding: 0px 20px;
   box-sizing: border-box;
-  background-color: #040405;
-  overflow-y: scroll;
+  background-color: #a3aabf;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &:-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #363636;
+  }
 `;
 
 export const SectionTitle = styled.h1`
-  color: #f8d909;
+  color: #040405;
   font-size: 60px;
   line-height: normal;
   margin: 20px 0px;
   width: fit-content;
+`;
+
+export const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 0px 20px;
+  background-color: #a3aabf;
+`;
+
+export const AboutSubtitle = styled.h2`
+  color: #040405;
+  font-weight: 700;
+  font-size: 1, 25rem;
+  margin: 0;
+`;
+export const AboutText = styled.p`
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #040405;
+  margin: 0;
+  font-family: monospace;
+`;
+
+export const ItemContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin: 20px 0px;
+`;
+
+export const HStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+export const ChipContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+`;
+
+export const Chip = styled.div`
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: blue;
 `;
