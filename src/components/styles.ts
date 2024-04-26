@@ -24,12 +24,13 @@ export const Hidden = styled.h1`
 `;
 //si no se usa con css los keyframes no funcionan, cambios de v3 a v4 de styled components
 export const LandingTitle = styled.h2<TitleProps>`
-  color: #a3aabf;
+  color: #d9d9d9;
   background-color: #040405;
   font-style: bold;
   font-weight: 700;
   line-height: normal;
   margin: 0;
+  padding: 0px 10px;
 
   width: fit-content;
 
@@ -54,7 +55,7 @@ export const LandingWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: #a3aabf;
+  background-color: #bfbfbf;
 
   @media (max-width: 650px) {
     background-color: #040405;
@@ -91,8 +92,8 @@ export const Navbar = styled.div`
   padding: 20px 20px;
 
   @media (max-width: 768px) {
-    width: 90%;
-    right: 2%;
+    right: 10%;
+    gap: 5px;
     padding: 10px 10px;
   }
 `;
@@ -106,6 +107,8 @@ export const NavItem = styled(Link)`
   text-decoration: none !important;
   border-radius: 50px;
   padding: 10px 35px;
+  cursor: pointer;
+  font-family: monospace;
 
   &:hover {
     font-weight: 500;
@@ -118,9 +121,9 @@ export const NavItem = styled(Link)`
   }
 
   @media (max-width: 650px) {
-    font-size: 30px;
-    color: #f8d909;
-    padding: 20px;
+    font-size: 20px;
+    color: #d9d9d9;
+    padding: 10px;
   }
 `;
 
@@ -132,22 +135,10 @@ export const WorkWrapper = styled.div`
   height: 100%;
   padding: 0px 20px;
   box-sizing: border-box;
-  background-color: #a3aabf;
+  background-color: #d9d9d9;
 
-  &::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  &::-webkit-scrollbar-track {
-    border-radius: 8px;
-    background-color: #e7e7e7;
-    border: 1px solid #cacaca;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  }
-
-  &:-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: #363636;
+  &.contact {
+    height: 100vh;
   }
 `;
 
@@ -163,9 +154,9 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 55%;
   padding: 0px 20px;
-  background-color: #a3aabf;
+  background-color: #d9d9d9;
 `;
 
 export const AboutSubtitle = styled.h2`
@@ -174,6 +165,7 @@ export const AboutSubtitle = styled.h2`
   font-size: 1, 25rem;
   margin: 0;
 `;
+
 export const AboutText = styled.p`
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -181,6 +173,16 @@ export const AboutText = styled.p`
   color: #040405;
   margin: 0;
   font-family: monospace;
+`;
+
+export const Dates = styled.p`
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #040404;
+  margin: 0;
+  font-family: monospace;
+  white-space: nowrap;
 `;
 
 export const ItemContainer = styled.div`
@@ -197,6 +199,7 @@ export const HStack = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 10px;
 `;
 
 export const ChipContainer = styled.div`
@@ -205,11 +208,18 @@ export const ChipContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  margin: 20px 0px;
 `;
 
 export const Chip = styled.div`
   width: fit-content;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: blue;
+  background-color: #a3aabf;
+`;
+
+export const GoBack = styled(Link)`
+  position: absolute;
+  top: 5;
+  right: 5;
 `;

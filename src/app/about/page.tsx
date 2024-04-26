@@ -11,6 +11,8 @@ import {
   HStack,
   Chip,
   ChipContainer,
+  Dates,
+  GoBack,
 } from "@/components/styles";
 import {
   aboutEducation,
@@ -24,6 +26,7 @@ const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 export default function Page() {
   return (
     <WorkWrapper>
+      <GoBack href={"/"}>{"<<<back"}</GoBack>
       <SectionTitle className={bebas_neue.className}>About</SectionTitle>
       <TextWrapper>
         <AboutText>{shortDesc}</AboutText>
@@ -37,7 +40,7 @@ export default function Page() {
               <AboutText>{item.position}</AboutText>
             </HStack>
             <HStack>
-              <AboutText>{item.date}</AboutText>
+              <Dates>{item.date}</Dates>
             </HStack>
           </ItemContainer>
         ))}
@@ -52,7 +55,7 @@ export default function Page() {
               <AboutText>{item.description}</AboutText>
             </HStack>
             <HStack>
-              <AboutText>{item.date}</AboutText>
+              <Dates>{item.date}</Dates>
               <Chip>
                 <AboutText>{item.chip}</AboutText>
               </Chip>

@@ -13,49 +13,56 @@ export const myWorks = [
     subtitle: "Kennel redesign",
     imagen: pencil.src,
     url: "https://www.behance.net/gallery/100261651/Canil-transportable-4X",
-    description: "",
+    description:
+      "Challenge of materials, processes, and morphologies to create a kennel design that withstands heavy weights and does not deform or break easily.",
   },
   {
     title: "Ux Research",
     subtitle: "Billetera Santa Fe UX Case",
     imagen: pencil.src,
     url: "https://www.behance.net/gallery/183619529/Billetera-Santa-Fe-UX-Research-Case-Study",
-    description: "",
+    description:
+      "Research on the Billetera Santa Fe application, a cashback wallet operating throughout the province of Santa Fe and used daily by many people.",
   },
   {
     title: "Writing",
     subtitle: "Obras del diseño de la Argentina industrialista",
     imagen: pen.src,
     url: "https://medium.com/@ftzeitler/obras-del-dise%C3%B1o-de-la-argentina-industrialista-f79d9b9e57d0",
-    description: "",
+    description:
+      "An analysis of industrial design in Argentina during the 1960s-1970s, focusing on its architectural and design productions, with a specific emphasis on the W Chair by Janello.",
   },
   {
     title: "Frontend",
     subtitle: "My first portfolio",
     imagen: code.src,
     url: "https://github.com/Fezzito/portfolio",
-    description: "",
+    description:
+      "My first portfolio created after completing a bootcamp using Chakra UI, constrained by the customization options of the libraries and my limited knowledge at that time.",
   },
   {
     title: "Frontend",
     subtitle: "My first ever webpage",
     imagen: code.src,
     url: "https://retos-summerhack.web.app/",
-    description: "",
+    description:
+      "Fanpage about a song and a band, aiming to have a web player with the music video and lyrics of the song, with extensive use of semantic HTML.",
   },
   {
     title: "Writing",
     subtitle: "Vulgar display of dogecoin",
     imagen: pen.src,
     url: "https://medium.com/@ftzeitler/vulgar-display-of-dogecoin-b06ca529bddc",
-    description: "",
+    description:
+      "An analysis of how a cryptocurrency without fundamentals or a clear purpose behind it managed to achieve a higher market cap than national banks, and how some individuals capitalized on this phenomenon.",
   },
   {
     title: "Design",
     subtitle: "Blackout curtain design",
     imagen: pencil.src,
     url: "https://www.behance.net/gallery/180032921/Elevador-de-cortina-tipo-blackout",
-    description: "",
+    description:
+      "Design of a power reduction gearbox, gears, transmission systems, and connections for a blackout roller blind, starting from the requirement of a pre-established motor.",
   },
   {
     title: "Frontend",

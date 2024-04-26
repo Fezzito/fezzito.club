@@ -8,9 +8,13 @@ import {
   Image,
   Divider,
   CardBody,
-  Link,
 } from "@nextui-org/react";
-import { SectionTitle, WorkWrapper } from "@/components/styles";
+import {
+  SectionTitle,
+  WorkWrapper,
+  AboutText,
+  GoBack,
+} from "@/components/styles";
 import { myWorks } from "@/lib/constants";
 import { Bebas_Neue } from "next/font/google";
 import "tailwindcss/tailwind.css";
@@ -20,6 +24,7 @@ const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 export default function Page() {
   return (
     <WorkWrapper>
+      <GoBack href={"/"}>{"<<<back"}</GoBack>
       <SectionTitle className={bebas_neue.className}>Work</SectionTitle>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 grid-rows-4 auto-rows-[1fr] ">
         {myWorks.map((item, index) => (
@@ -27,7 +32,7 @@ export default function Page() {
             key={index}
             isPressable={true}
             isHoverable={true}
-            style={{ backgroundColor: "#040405" }}
+            style={{ backgroundColor: "#d9d9d9" }}
             onPress={() => {
               window.open(item.url, "_blank");
             }}
@@ -41,25 +46,31 @@ export default function Page() {
                 width={50}
               />
               <div className="flex flex-col">
-                <p
-                  style={{ color: "#A3AABF" }}
+                <AboutText
+                  style={{ color: "#040404" }}
                   className="text-tiny uppercase font-bold"
                 >
                   {item.title}
-                </p>
+                </AboutText>
               </div>
             </CardHeader>
             <Divider style={{ backgroundColor: "#A3AABF" }} />
             <CardBody>
-              <p style={{ color: "#A3AABF" }} className="font-bold text-large">
+              <AboutText
+                style={{ color: "#040404" }}
+                className="font-bold text-large"
+              >
                 {item.subtitle}
-              </p>
+              </AboutText>
             </CardBody>
             <Divider style={{ backgroundColor: "#A3AABF" }} />
             <CardFooter>
-              <p style={{ color: "#A3AABF" }} className="font-bold text-large">
+              <AboutText
+                style={{ color: "#040404" }}
+                className="font-bold text-large"
+              >
                 {item.description}
-              </p>
+              </AboutText>
             </CardFooter>
           </Card>
         ))}
