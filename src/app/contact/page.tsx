@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Card, CardHeader, Image, CardBody, Divider } from "@nextui-org/react";
+import { Card, Image, Divider } from "@nextui-org/react";
 import {
   AboutText,
   SectionTitle,
@@ -18,7 +18,7 @@ export default function Page() {
     <WorkWrapper className="contact">
       <SectionTitle className={bebas_neue.className}>Contact</SectionTitle>
       <GoBack href={"/"}>{"<<<back"}</GoBack>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 grid-rows-4 auto-rows-[1fr] ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 grid-rows-2 auto-rows-[1fr] ">
         {mySocials.map((item, index) => (
           <Card
             key={index}

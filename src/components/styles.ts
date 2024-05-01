@@ -56,6 +56,7 @@ export const LandingWrapper = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #bfbfbf;
+  justify-content: space-between;
 
   @media (max-width: 650px) {
     background-color: #040405;
@@ -85,15 +86,10 @@ export const Navbar = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  position: absolute;
-  bottom: 20px;
-  right: 40%;
   gap: 25px;
   padding: 20px 20px;
 
   @media (max-width: 768px) {
-    right: 10%;
-    gap: 5px;
     padding: 10px 10px;
   }
 `;
@@ -115,12 +111,13 @@ export const NavItem = styled(Link)`
     transition: all 0.5s ease-in;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
+    color: #d9d9d9;
     font-size: 20px;
     padding: 8px 20px;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 320px) {
     font-size: 20px;
     color: #d9d9d9;
     padding: 10px;
@@ -139,6 +136,18 @@ export const WorkWrapper = styled.div`
 
   &.contact {
     height: 100vh;
+
+    @media (max-width: 768px) {
+      height: 100%;
+    }
+  }
+
+  &.about {
+    width: 100vw;
+
+    @media (max-width: 768px) {
+      width: fit-content;
+    }
   }
 `;
 
@@ -157,6 +166,10 @@ export const TextWrapper = styled.div`
   width: 55%;
   padding: 0px 20px;
   background-color: #d9d9d9;
+
+  @media (max-width: 768px) {
+    width: 75%;
+  }
 `;
 
 export const AboutSubtitle = styled.h2`
@@ -209,6 +222,14 @@ export const ChipContainer = styled.div`
   justify-content: space-evenly;
   width: 100%;
   margin: 20px 0px;
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
 `;
 
 export const Chip = styled.div`

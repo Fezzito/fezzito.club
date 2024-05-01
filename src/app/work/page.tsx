@@ -26,7 +26,7 @@ export default function Page() {
     <WorkWrapper>
       <GoBack href={"/"}>{"<<<back"}</GoBack>
       <SectionTitle className={bebas_neue.className}>Work</SectionTitle>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 grid-rows-4 auto-rows-[1fr] ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 grid-rows-4 auto-rows-[1fr] ">
         {myWorks.map((item, index) => (
           <Card
             key={index}

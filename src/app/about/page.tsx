@@ -25,7 +25,7 @@ const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 export default function Page() {
   return (
-    <WorkWrapper>
+    <WorkWrapper className="about">
       <GoBack href={"/"}>{"<<<back"}</GoBack>
       <SectionTitle className={bebas_neue.className}>About</SectionTitle>
       <TextWrapper>
