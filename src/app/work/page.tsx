@@ -23,16 +23,20 @@ const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 export default function Page() {
   return (
-    <WorkWrapper>
+    <WorkWrapper className="work">
       <GoBack href={"/"}>{"<<<back"}</GoBack>
       <SectionTitle className={bebas_neue.className}>Work</SectionTitle>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 grid-rows-4 auto-rows-[1fr] ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 auto-rows-[1fr] ">
         {myWorks.map((item, index) => (
           <Card
             key={index}
             isPressable={true}
             isHoverable={true}
-            style={{ backgroundColor: "#d9d9d9" }}
+            style={{
+              backgroundColor: "#d9d9d9",
+              border: "solid 1px #A3AABF",
+              borderRadius: "10px",
+            }}
             onPress={() => {
               window.open(item.url, "_blank");
             }}
