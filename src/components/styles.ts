@@ -149,6 +149,10 @@ export const WorkWrapper = styled.div`
       width: fit-content;
     }
   }
+
+  &.work {
+    height: 100vh;
+  }
 `;
 
 export const SectionTitle = styled.h1`
