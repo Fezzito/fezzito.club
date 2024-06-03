@@ -1,11 +1,13 @@
 "use client";
 import React from "react";
-import { Card, Image, Divider } from "@nextui-org/react";
+
 import {
   AboutText,
   SectionTitle,
   WorkWrapper,
   GoBack,
+  Card,
+  ImageComponent,
 } from "@/components/styles";
 import { mySocials } from "@/lib/constants";
 import { Bebas_Neue } from "next/font/google";
@@ -22,27 +24,13 @@ export default function Page() {
         {mySocials.map((item, index) => (
           <Card
             key={index}
-            isPressable={true}
-            style={{
-              backgroundColor: "#d9d9d9",
-              width: "220px",
-              height: "220px",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-            }}
-            onPress={() => {
+            onClick={() => {
               window.open(item.url, "_blank");
             }}
+            className="fromContact"
           >
-            <Image
-              alt="nextui logo"
-              height={99}
-              radius="lg"
-              src={item.image}
-              width={99}
-            />
-            <Divider style={{ backgroundColor: "#A3AABF" }} />
-            <AboutText>{item.title}</AboutText>
+            <AboutText fontSize="15px">{item.title}</AboutText>
+            <ImageComponent src={item.imagen} />
           </Card>
         ))}
       </div>

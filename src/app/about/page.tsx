@@ -57,7 +57,7 @@ export default function Page() {
             <HStack>
               <Dates>{item.date}</Dates>
               <Chip>
-                <AboutText>{item.chip}</AboutText>
+                <AboutText className="chip">{item.chip}</AboutText>
               </Chip>
             </HStack>
           </ItemContainer>
@@ -66,7 +66,7 @@ export default function Page() {
         <ChipContainer>
           {skillsArray.map((item, index) => (
             <Chip key={index}>
-              <AboutText>{item}</AboutText>
+              <AboutText className="chip">{item}</AboutText>
             </Chip>
           ))}
         </ChipContainer>
