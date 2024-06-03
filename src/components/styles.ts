@@ -8,6 +8,12 @@ interface TitleProps {
   animate?: boolean; //si lo declaro inline llora Typescript
   index: number;
 }
+interface AboutTextProps {
+  fontSize?: string;
+}
+interface ImageProps {
+  src?: string;
+}
 
 const changeFontSize = keyframes`
 0% { font-size: 48px; }
@@ -183,13 +189,17 @@ export const AboutSubtitle = styled.h2`
   margin: 0;
 `;
 
-export const AboutText = styled.p`
-  font-size: 0.875rem;
+export const AboutText = styled.p<AboutTextProps>`
+  font-size: ${(props) => props.fontSize || "0,875rem"};
   line-height: 1.25rem;
   font-weight: 600;
-  color: #040405;
-  margin: 0;
+  color: #040404;
+  margin: 0px 0px 10px 0px;
   font-family: monospace;
+
+  &.chip {
+    margin: 0px;
+  }
 `;
 
 export const Dates = styled.p`
@@ -210,6 +220,8 @@ export const ItemContainer = styled.div`
   width: 100%;
   height: fit-content;
   margin: 20px 0px;
+  border: solid 1px #a3aabf;
+  border-radius: 10px;
 `;
 
 export const HStack = styled.div`
@@ -238,7 +250,7 @@ export const ChipContainer = styled.div`
 
 export const Chip = styled.div`
   width: fit-content;
-  padding: 5px 10px;
+  padding: 3px 7px;
   border-radius: 5px;
   background-color: #a3aabf;
 `;
@@ -247,4 +259,28 @@ export const GoBack = styled(Link)`
   position: absolute;
   top: 5;
   right: 5;
+`;
+
+export const Card = styled.div`
+  width: fit-content;
+  background-color: #bfbdba;
+  border: solid 1px #a3aabf;
+  border-radius: 10px;
+  padding: 10px;
+
+  &.fromContact {
+    width: 220px;
+    height: 220px;
+    text-align-last: center;
+    text-align: -webkit-center;
+  }
+`;
+
+export const ImageComponent = styled.div<ImageProps>`
+  width: 150px;
+  height: 150px;
+  background: url(${(props) => props.src});
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;

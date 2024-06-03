@@ -77,27 +77,27 @@ export const myWorks = [
 export const mySocials = [
   {
     title: "BeHance",
-    image: behance.src,
+    imagen: behance.src,
     url: "https://www.behance.net/feerzeitler",
   },
   {
     title: "Github",
-    image: github.src,
+    imagen: github.src,
     url: "https://github.com/Fezzito",
   },
   {
     title: "LinkedIn",
-    image: linkedin.src,
+    imagen: linkedin.src,
     url: "https://www.linkedin.com/in/fernando-zeitler/",
   },
   {
     title: "Medium",
-    image: medium.src,
+    imagen: medium.src,
     url: "https://medium.com/@ftzeitler",
   },
   {
     title: "Gmail",
-    image: gmail.src,
+    imagen: gmail.src,
     url: "https://mail.google.com/mail/?view=cm&fs=1&to=ftzeitler@gmail.com&su=ContactFromYourWebpage&body=HelloFezzito",
   },
 ];

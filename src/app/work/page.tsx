@@ -1,19 +1,19 @@
 // `app/work/page.tsx` is the UI for the `/work` URL
 "use client";
 import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardFooter,
-  Image,
-  Divider,
-  CardBody,
-} from "@nextui-org/react";
+// import {
+//   CardHeader,
+//   CardFooter,
+//   Image,
+//   Divider,
+//   CardBody,
+// } from "@nextui-org/react";
 import {
   SectionTitle,
   WorkWrapper,
   AboutText,
   GoBack,
+  Card,
 } from "@/components/styles";
 import { myWorks } from "@/lib/constants";
 import { Bebas_Neue } from "next/font/google";
@@ -28,55 +28,20 @@ export default function Page() {
       <SectionTitle className={bebas_neue.className}>Work</SectionTitle>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 auto-rows-[1fr] ">
         {myWorks.map((item, index) => (
-          <Card
-            key={index}
-            isPressable={true}
-            isHoverable={true}
-            style={{
-              backgroundColor: "#d9d9d9",
-              border: "solid 1px #A3AABF",
-              borderRadius: "10px",
-            }}
-            onPress={() => {
-              window.open(item.url, "_blank");
-            }}
-          >
-            <CardHeader className="flex gap-3">
-              <Image
-                alt="a black and white icon of a pen"
-                height={50}
-                radius="lg"
-                src={item.imagen}
-                width={50}
-              />
+          <>
+            <Card
+              key={index}
+              onClick={() => {
+                window.open(item.url, "_blank");
+              }}
+            >
               <div className="flex flex-col">
-                <AboutText
-                  style={{ color: "#040404" }}
-                  className="text-tiny uppercase font-bold"
-                >
-                  {item.title}
-                </AboutText>
+                <AboutText fontSize="18px">{item.title}</AboutText>
               </div>
-            </CardHeader>
-            <Divider style={{ backgroundColor: "#A3AABF" }} />
-            <CardBody>
-              <AboutText
-                style={{ color: "#040404" }}
-                className="font-bold text-large"
-              >
-                {item.subtitle}
-              </AboutText>
-            </CardBody>
-            <Divider style={{ backgroundColor: "#A3AABF" }} />
-            <CardFooter>
-              <AboutText
-                style={{ color: "#040404" }}
-                className="font-bold text-large"
-              >
-                {item.description}
-              </AboutText>
-            </CardFooter>
-          </Card>
+              <AboutText fontSize="15px">{item.subtitle}</AboutText>
+              <AboutText fontSize="13px">{item.description}</AboutText>
+            </Card>
+          </>
         ))}
       </div>
     </WorkWrapper>
