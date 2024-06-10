@@ -136,16 +136,12 @@ export const WorkWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0px 20px;
+  padding: 5px 20px 20px 20px;
   box-sizing: border-box;
   background-color: #d9d9d9;
 
   &.contact {
     height: 100vh;
-
-    @media (max-width: 768px) {
-      height: 100%;
-    }
   }
 
   &.about {
@@ -158,6 +154,10 @@ export const WorkWrapper = styled.div`
 
   &.work {
     height: 100vh;
+
+    @media (max-width: 1100px) {
+      height: 100%;
+    }
   }
 `;
 

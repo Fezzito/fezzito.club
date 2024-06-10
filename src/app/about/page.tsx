@@ -25,52 +25,54 @@ const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 export default function Page() {
   return (
-    <WorkWrapper className="about">
-      <GoBack href={"/"}>{"<<<back"}</GoBack>
-      <SectionTitle className={bebas_neue.className}>About</SectionTitle>
-      <TextWrapper>
-        <AboutText>{shortDesc}</AboutText>
-        <AboutSubtitle className={bebas_neue.className}>
-          Education
-        </AboutSubtitle>
-        {aboutEducation.map((item, index) => (
-          <ItemContainer key={index}>
-            <HStack>
-              <AboutText>{item.title}</AboutText>
-              <AboutText>{item.position}</AboutText>
-            </HStack>
-            <HStack>
-              <Dates>{item.date}</Dates>
-            </HStack>
-          </ItemContainer>
-        ))}
-        <AboutSubtitle className={bebas_neue.className}>
-          Work experience
-        </AboutSubtitle>
-        {aboutWork.map((item, index) => (
-          <ItemContainer key={index}>
-            <HStack>
-              <AboutText>{item.title}</AboutText>
-              <AboutText>{item.position}</AboutText>
-              <AboutText>{item.description}</AboutText>
-            </HStack>
-            <HStack>
-              <Dates>{item.date}</Dates>
-              <Chip>
-                <AboutText className="chip">{item.chip}</AboutText>
-              </Chip>
-            </HStack>
-          </ItemContainer>
-        ))}
-        <AboutSubtitle className={bebas_neue.className}>Skills</AboutSubtitle>
-        <ChipContainer>
-          {skillsArray.map((item, index) => (
-            <Chip key={index}>
-              <AboutText className="chip">{item}</AboutText>
-            </Chip>
+    <>
+      <WorkWrapper className="about">
+        <GoBack href={"/"}>{"<<<back"}</GoBack>
+        <SectionTitle className={bebas_neue.className}>About</SectionTitle>
+        <TextWrapper>
+          <AboutText>{shortDesc}</AboutText>
+          <AboutSubtitle className={bebas_neue.className}>
+            Education
+          </AboutSubtitle>
+          {aboutEducation.map((item, index) => (
+            <ItemContainer key={index}>
+              <HStack>
+                <AboutText>{item.title}</AboutText>
+                <AboutText>{item.position}</AboutText>
+              </HStack>
+              <HStack>
+                <Dates>{item.date}</Dates>
+              </HStack>
+            </ItemContainer>
           ))}
-        </ChipContainer>
-      </TextWrapper>
-    </WorkWrapper>
+          <AboutSubtitle className={bebas_neue.className}>
+            Work experience
+          </AboutSubtitle>
+          {aboutWork.map((item, index) => (
+            <ItemContainer key={index}>
+              <HStack>
+                <AboutText>{item.title}</AboutText>
+                <AboutText>{item.position}</AboutText>
+                <AboutText>{item.description}</AboutText>
+              </HStack>
+              <HStack>
+                <Dates>{item.date}</Dates>
+                <Chip>
+                  <AboutText className="chip">{item.chip}</AboutText>
+                </Chip>
+              </HStack>
+            </ItemContainer>
+          ))}
+          <AboutSubtitle className={bebas_neue.className}>Skills</AboutSubtitle>
+          <ChipContainer>
+            {skillsArray.map((item, index) => (
+              <Chip key={index}>
+                <AboutText className="chip">{item}</AboutText>
+              </Chip>
+            ))}
+          </ChipContainer>
+        </TextWrapper>
+      </WorkWrapper>
+    </>
   );
 }
