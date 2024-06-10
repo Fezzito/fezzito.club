@@ -12,11 +12,6 @@ import {
 import { mySocials } from "@/lib/constants";
 import { Bebas_Neue } from "next/font/google";
 import "tailwindcss/tailwind.css";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Contact",
-};
 
 const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 

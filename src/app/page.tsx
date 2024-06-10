@@ -10,18 +10,10 @@ import {
   Hidden,
 } from "@/components/styles";
 import Head from "next/head";
-import { Metadata } from "next";
 import { Bebas_Neue } from "next/font/google";
 
 //cuando se usa en una pagina especifica se tiene que declarar afuera de la funcion para evitar problemas de scope
 const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
-
-export const metadata: Metadata = {
-  title: {
-    template: "",
-    default: "Fezzito.club", // a default is required when creating a template
-  },
-};
 
 export default function Page() {
   //handleo de la animacion

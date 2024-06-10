@@ -20,11 +20,6 @@ import {
   skillsArray,
   shortDesc,
 } from "@/lib/constants";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About",
-};
 
 const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
