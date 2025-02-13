@@ -1,7 +1,7 @@
 //file to make StyledComponents usable within Next
 "use client";
 
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 import Link from "next/link";
 
 interface TitleProps {
@@ -15,45 +15,20 @@ interface ImageProps {
   src?: string;
 }
 
-const changeFontSize = keyframes`
-0% { font-size: 48px; }
-20% { font-size: 64px; }
-40% { font-size: 80px; }
-60% { font-size: 96px; }
-80% { font-size: 112px; }
-100% { font-size: 128px; }
-`;
 export const Hidden = styled.h1`
   background-color: transparent;
   color: transparent;
   font-size: 1px;
 `;
-//si no se usa con css los keyframes no funcionan, cambios de v3 a v4 de styled components
+
 export const LandingTitle = styled.h2<TitleProps>`
-  color: #d9d9d9;
-  background-color: #040405;
+  color: #ffa64a;
   font-style: bold;
   font-weight: 700;
   line-height: normal;
   margin: 0;
   padding: 0px 10px;
-
   width: fit-content;
-
-  ${({ animate }) =>
-    animate &&
-    css`
-      animation: ${css`
-          ${changeFontSize}`} 7s ease-in-out;
-    `}
-
-  @media (max-width: 650px) {
-    font-size: 5em !important;
-  }
-
-  @media (max-width: 450px) {
-    font-size: 4em !important;
-  }
 `;
 
 export const LandingWrapper = styled.div`
@@ -61,17 +36,11 @@ export const LandingWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: #bfbfbf;
+  background-color: #222222;
   justify-content: space-between;
 
   @media (max-width: 650px) {
-    background-color: #040405;
   }
-`;
-
-export const Hero = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 export const LandingSubtitle = styled.h3`
@@ -87,35 +56,17 @@ export const LandingSubtitle = styled.h3`
   }
 `;
 
-export const Navbar = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 25px;
-  padding: 20px 20px;
-
-  @media (max-width: 768px) {
-    padding: 10px 10px;
-  }
-`;
-
 export const NavItem = styled(Link)`
-  color: #040405;
+  color: #ffa64a;
   font-size: 35px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
   text-decoration: none !important;
   border-radius: 50px;
-  padding: 10px 35px;
+  padding: 10px 0px;
   cursor: pointer;
   font-family: monospace;
-
-  &:hover {
-    font-weight: 500;
-    transition: all 0.5s ease-in;
-  }
 
   @media (max-width: 650px) {
     color: #d9d9d9;
@@ -133,36 +84,31 @@ export const NavItem = styled(Link)`
 export const WorkWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
   padding: 5px 20px 20px 20px;
   box-sizing: border-box;
-  background-color: #d9d9d9;
+  background-color: #222222;
 
   &.contact {
     height: 100vh;
   }
 
   &.about {
-    width: 100vw;
+
 
     @media (max-width: 768px) {
       width: fit-content;
     }
   }
 
-  &.work {
-    height: 100vh;
 
-    @media (max-width: 1100px) {
-      height: 100%;
-    }
   }
 `;
 
 export const SectionTitle = styled.h1`
-  color: #040405;
+  color: #f9e4bc;
   font-size: 60px;
   line-height: normal;
   margin: 20px 0px;
@@ -172,10 +118,11 @@ export const SectionTitle = styled.h1`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 55%;
+  align-self: center;
+
+  width: 90%;
   padding: 0px 20px;
-  background-color: #d9d9d9;
+  background-color: #222222;
 
   @media (max-width: 768px) {
     width: 75%;
@@ -183,18 +130,18 @@ export const TextWrapper = styled.div`
 `;
 
 export const AboutSubtitle = styled.h2`
-  color: #040405;
+  color: #f9e4bc;
   font-weight: 700;
   font-size: 1, 25rem;
-  margin: 0;
+  margin: 30px 0px;
 `;
 
 export const AboutText = styled.p<AboutTextProps>`
   font-size: ${(props) => props.fontSize || "0,875rem"};
   line-height: 1.25rem;
   font-weight: 600;
-  color: #040404;
-  margin: 0px 0px 10px 0px;
+  color: #f9e4bc;
+  margin: 5px 0px 10px 0px;
   font-family: monospace;
 
   &.chip {
@@ -206,7 +153,7 @@ export const Dates = styled.p`
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 600;
-  color: #040404;
+  color: #f9e4bc;
   margin: 0;
   font-family: monospace;
   white-space: nowrap;
@@ -224,10 +171,16 @@ export const ItemContainer = styled.div`
   border-radius: 10px;
 `;
 
-export const HStack = styled.div`
+export const VStack = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+`;
+export const HStack = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px;
 `;
 
@@ -257,8 +210,11 @@ export const Chip = styled.div`
 
 export const GoBack = styled(Link)`
   position: absolute;
-  top: 5;
-  right: 5;
+  top: 10px;
+  right: 50%;
+  font-size: 20px;
+  color: #ffa64a;
+  text-decoration: none !important;
 `;
 
 export const Card = styled.div`
@@ -277,10 +233,15 @@ export const Card = styled.div`
 `;
 
 export const ImageComponent = styled.div<ImageProps>`
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   background: url(${(props) => props.src});
-  border-radius: 10px;
   background-repeat: no-repeat;
   background-size: cover;
+`;
+
+export const Spacer = styled.div`
+  width: 100%;
+  border-bottom: 2px solid #ffa64a;
+  margin: 10px 0;
 `;
