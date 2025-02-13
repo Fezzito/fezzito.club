@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Bebas_Neue } from "next/font/google";
+
 import {
   SectionTitle,
   WorkWrapper,
@@ -13,6 +13,8 @@ import {
   ChipContainer,
   Dates,
   GoBack,
+  VStack,
+  Spacer,
 } from "@/components/styles";
 import {
   aboutEducation,
@@ -20,55 +22,60 @@ import {
   skillsArray,
   shortDesc,
 } from "@/lib/constants";
+import { Share_Tech_Mono } from "next/font/google";
 
-const bebas_neue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
-
+const shareTechMono = Share_Tech_Mono({ subsets: ["latin"], weight: "400" });
 export default function Page() {
   return (
     <>
       <WorkWrapper className="about">
         <GoBack href={"/"}>{"<<<back"}</GoBack>
-        <SectionTitle className={bebas_neue.className}>About</SectionTitle>
+        <SectionTitle className={shareTechMono.className}>About</SectionTitle>
         <TextWrapper>
           <AboutText>{shortDesc}</AboutText>
-          <AboutSubtitle className={bebas_neue.className}>
+          <AboutSubtitle className={shareTechMono.className}>
             Education
           </AboutSubtitle>
           {aboutEducation.map((item, index) => (
-            <ItemContainer key={index}>
-              <HStack>
-                <AboutText>{item.title}</AboutText>
-                <AboutText>{item.position}</AboutText>
+            <>
+              <HStack key={index}>
+                <VStack>
+                  <AboutText>{item.title}</AboutText>
+                  <AboutText>{item.position}</AboutText>
+                </VStack>
+                <VStack>
+                  <Dates>{item.date}</Dates>
+                </VStack>
               </HStack>
-              <HStack>
-                <Dates>{item.date}</Dates>
-              </HStack>
-            </ItemContainer>
+              <Spacer />
+            </>
           ))}
-          <AboutSubtitle className={bebas_neue.className}>
+          <AboutSubtitle className={shareTechMono.className}>
             Work experience
           </AboutSubtitle>
           {aboutWork.map((item, index) => (
-            <ItemContainer key={index}>
-              <HStack>
-                <AboutText>{item.title}</AboutText>
-                <AboutText>{item.position}</AboutText>
-                <AboutText>{item.description}</AboutText>
+            <>
+              <HStack key={index}>
+                <VStack>
+                  <AboutText>{item.title}</AboutText>
+                  <AboutText>{item.position}</AboutText>
+                  <AboutText>{item.description}</AboutText>
+                </VStack>
+                <VStack>
+                  <Dates>{item.date}</Dates>
+
+                  <AboutText>{item.chip}</AboutText>
+                </VStack>
               </HStack>
-              <HStack>
-                <Dates>{item.date}</Dates>
-                <Chip>
-                  <AboutText className="chip">{item.chip}</AboutText>
-                </Chip>
-              </HStack>
-            </ItemContainer>
+              <Spacer />
+            </>
           ))}
-          <AboutSubtitle className={bebas_neue.className}>Skills</AboutSubtitle>
+          <AboutSubtitle className={shareTechMono.className}>
+            Skills
+          </AboutSubtitle>
           <ChipContainer>
             {skillsArray.map((item, index) => (
-              <Chip key={index}>
-                <AboutText className="chip">{item}</AboutText>
-              </Chip>
+              <AboutText key={index}>{item}</AboutText>
             ))}
           </ChipContainer>
         </TextWrapper>
