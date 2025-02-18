@@ -7,6 +7,7 @@ import {
   WorkWrapper,
   GoBack,
   Spacer,
+  TextWrapper,
 } from "@/components/styles";
 import { mySocials } from "@/lib/constants";
 import { JetBrains_Mono } from "next/font/google";
@@ -19,20 +20,21 @@ export default function Page() {
       <WorkWrapper className="contact">
         <SectionTitle className={jetbrainsMono.className}>Contact</SectionTitle>
         <GoBack href={"/"}>{"<<<back"}</GoBack>
-
-        {mySocials.map((item, index) => (
-          <>
-            <a
-              key={index}
-              onClick={() => {
-                window.open(item.url, "_blank");
-              }}
-            >
-              <AboutText fontSize="30px">{item.title}</AboutText>
-            </a>
-            <Spacer />
-          </>
-        ))}
+        <TextWrapper>
+          {mySocials.map((item, index) => (
+            <>
+              <a
+                key={index}
+                onClick={() => {
+                  window.open(item.url, "_blank");
+                }}
+              >
+                <AboutText className="contact">{item.title}</AboutText>
+              </a>
+              <Spacer />
+            </>
+          ))}
+        </TextWrapper>
       </WorkWrapper>
     </>
   );
