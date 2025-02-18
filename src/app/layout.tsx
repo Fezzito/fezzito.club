@@ -2,7 +2,6 @@ import StyledComponentsRegistry from "../lib/registry";
 import { Analytics } from "@vercel/analytics/react";
 import { Roboto_Mono } from "next/font/google";
 import { Providers } from "./providers";
-// import { ViewTransitions } from "next-view-transitions";
 
 export const roboto_mono = Roboto_Mono({
   subsets: ["latin"],
@@ -16,7 +15,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // <ViewTransitions>
     <html lang="en">
       <body
         className={`${roboto_mono.className}`}
@@ -28,6 +26,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-    // </ViewTransitions>
   );
 }

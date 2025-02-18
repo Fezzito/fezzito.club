@@ -8,7 +8,6 @@ import {
   ImageComponent,
   VStack,
   HStack,
-  Spacer,
 } from "@/components/styles";
 import Head from "next/head";
 import logo from "../../public/logo.svg";
@@ -23,31 +22,32 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Fezzito.club</title>
-        <meta property="og:title" content="Fezzito.club" />
-        <meta property="og:url" content="https://www.fezzito.club/" />
+        <title>Carancho Diseño Argentino</title>
+        <meta name="robots" content="all" />
+        <meta property="og:title" content="Carancho Diseño Argentino" />
+        <meta property="og:url" content="https://caranchodisarg.vercel.app" />
         <meta
           property="og:description"
-          content="Welcome to my hub. Product, research and frontend, all in one. Enjoy!."
+          content="Carancho Diseño Argentino. Producto, I+D+i y diseño, all in one."
         />
         <meta
           property="og:image"
-          content="https://www.fezzito.club/opengraphimg.svg"
+          content="https://caranchodisarg.vercel.app/opengraphimg.png"
         />
         <meta
           property="og:image:url"
-          content="https://www.fezzito.club/opengraphimg.svg"
+          content="https://caranchodisarg.vercel.app/opengraphimg.png"
         />
         <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="315" />
-        <meta property="author" content="Fezzito" />
+        <meta property="author" content="Carancho Diseño Argentino" />
         <meta
           property="keywords"
-          content="UX, Development, Design, UX Research, Product, Research, Portfolio"
+          content="I+D+i, Desarrollo, Diseño, Investigacion, Producto, Manufactura, Portfolio"
         />
         <meta
           property="og:site_name"
-          content="Ux research, product desing and frontend at your service"
+          content="Carancho Diseño Argentino. Producto, I+D+i y diseño, all in oneS"
         />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta property="og:locale" content="en_US" />
@@ -57,7 +57,7 @@ export default function Page() {
         <meta property="og:type" content="website" />
         <meta property="geo.placename" content="Buenos Aires, Argentina" />
         <meta property="geo.position" content="-34.61315;-58.37723" />
-        <meta property="copyright" content="© 2023 - Fezzito" />
+        <meta property="copyright" content="© 2023 - Carancho Dis Arg" />
         {/* twitter card markup */}
         <meta property="twitter:card" content="summary" />
         <meta property="twitter:site" content="@fezzit0" />
@@ -69,7 +69,6 @@ export default function Page() {
             {landingArray.map((item, index) => (
               <LandingTitle
                 key={index}
-                index={index}
                 style={{ fontSize: `50px` }}
                 className={shareTechMono.className}
               >
@@ -79,11 +78,16 @@ export default function Page() {
           </VStack>
           <ImageComponent src={logo.src} />
         </HStack>
-
-        <VStack>
-          <NavItem href={"/work"}>trabajos</NavItem>
-          <NavItem href={"/contact"}>contacto</NavItem>
-          <NavItem href={"/about"}>sobre mi</NavItem>
+        <VStack padding="20px">
+          <NavItem className={shareTechMono.className} href={"/work"}>
+            trabajos
+          </NavItem>
+          <NavItem className={shareTechMono.className} href={"/contact"}>
+            contacto
+          </NavItem>
+          {/* <NavItem className={shareTechMono.className} href={"/about"}>
+            sobre mi
+          </NavItem> */}
         </VStack>
       </LandingWrapper>
     </>

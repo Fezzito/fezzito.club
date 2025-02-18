@@ -6,13 +6,16 @@ import Link from "next/link";
 
 interface TitleProps {
   animate?: boolean; //si lo declaro inline llora Typescript
-  index: number;
 }
 interface AboutTextProps {
   fontSize?: string;
 }
 interface ImageProps {
   src?: string;
+}
+
+interface VStackProps {
+  padding?: string;
 }
 
 export const Hidden = styled.h1`
@@ -29,6 +32,10 @@ export const LandingTitle = styled.h2<TitleProps>`
   margin: 0;
   padding: 0px 10px;
   width: fit-content;
+
+  @media (max-width: 650px) {
+    display: none;
+  }
 `;
 
 export const LandingWrapper = styled.div`
@@ -38,9 +45,6 @@ export const LandingWrapper = styled.div`
   height: 100vh;
   background-color: #222222;
   justify-content: space-between;
-
-  @media (max-width: 650px) {
-  }
 `;
 
 export const LandingSubtitle = styled.h3`
@@ -51,8 +55,7 @@ export const LandingSubtitle = styled.h3`
   line-height: normal;
 
   @media (max-width: 768px) {
-    font-size: 22px;
-    width: 145px;
+    font-size: 20px;
   }
 `;
 
@@ -66,19 +69,6 @@ export const NavItem = styled(Link)`
   border-radius: 50px;
   padding: 10px 0px;
   cursor: pointer;
-  font-family: monospace;
-
-  @media (max-width: 650px) {
-    color: #d9d9d9;
-    font-size: 20px;
-    padding: 8px 20px;
-  }
-
-  @media (max-width: 320px) {
-    font-size: 20px;
-    color: #d9d9d9;
-    padding: 10px;
-  }
 `;
 
 export const WorkWrapper = styled.div`
@@ -96,14 +86,10 @@ export const WorkWrapper = styled.div`
   }
 
   &.about {
-
-
     @media (max-width: 768px) {
       width: fit-content;
     }
   }
-
-
   }
 `;
 
@@ -147,6 +133,13 @@ export const AboutText = styled.p<AboutTextProps>`
   &.chip {
     margin: 0px;
   }
+
+  &.contact {
+    font-size: 30px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
 `;
 
 export const Dates = styled.p`
@@ -171,10 +164,11 @@ export const ItemContainer = styled.div`
   border-radius: 10px;
 `;
 
-export const VStack = styled.div`
+export const VStack = styled.div<VStackProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: ${(props) => props.padding};
 `;
 export const HStack = styled.div`
   display: flex;
@@ -238,6 +232,11 @@ export const ImageComponent = styled.div<ImageProps>`
   background: url(${(props) => props.src});
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
 `;
 
 export const Spacer = styled.div`
